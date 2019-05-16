@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Degrade */
+    background: rgb(151,88,237);
+    background: -moz-linear-gradient(-45deg, rgba(151,88,237,1) 0%, rgba(197,113,166,1) 50%, rgba(247,140,89,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);
+    background: linear-gradient(135deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9758ed', endColorstr='#f78c59',GradientType=1 );
+
+}
+
+header #logo-home img{
+    width: 180px;
+}
+
+header nav{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+header nav a{
+    font-family: 'Oxygen', sans-serif;
+    color: #fff;
+}
