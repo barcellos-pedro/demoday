@@ -40,8 +40,8 @@ header nav a:hover{
 /* FIM HEADER */
 
 
-/* BACKGROUND DO HEADER, FOOTER, DIV.COMO FAZEMOS */
-header, footer, #como-fazemos{
+/* BACKGROUND DO HEADER, DIV.COMO FAZEMOS */
+header, #como-fazemos{
     /* Degrade */
     background: rgb(151,88,237);
     background: -moz-linear-gradient(-45deg, rgba(151,88,237,1) 0%, rgba(197,113,166,1) 50%, rgba(247,140,89,1) 100%);
@@ -103,6 +103,7 @@ header, footer, #como-fazemos{
     justify-content: center;
     align-items: center;
     padding: 15px;
+    height: 350px;
 }
 
 #como-fazemos h3{
@@ -130,3 +131,65 @@ header, footer, #como-fazemos{
     background-color: #fff;
 }
 /* FIM COMO FAZEMOS */
+
+/* FAÇA PARTE */
+#facaParte{
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#facaParte div{
+    display: flex;
+    flex-direction: column;
+}
+
+#facaParte h3{
+    font-size: 35pt;
+    color: #ee8c58;
+}
+
+#eusou-container{
+    background-color: #ee8c58;
+    height: 190px;
+    width: 220px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#eusou-setinha, #eusou-aluno, #eusou-ong{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#eusou-setinha, #eusou-aluno, #eusou-ong, #facaParte-cadastro p{
+    color: #ee8c58;
+    font-size: 15pt;
+}
+
+#facaParte-cadastro span{
+    background-color: #ee8c58;
+    color: white;
+    border-radius: 10%;
+    font-size: 12pt;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#facaParte img{
+    height: 320px;
+    width: 320px;
+}
+/* FIM DO FAÇA PARTE */
+
+/* FALE AQUI */
