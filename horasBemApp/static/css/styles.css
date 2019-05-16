@@ -5,6 +5,7 @@
     padding: 0;
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
+    list-style: none
 
 }
 
@@ -21,7 +22,7 @@ header #logo-home img{
 }
 
 header nav{
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -39,8 +40,8 @@ header nav a:hover{
 /* FIM HEADER */
 
 
-/* BACKGROUND DO HEADER E DO FOOTER */
-header, footer{
+/* BACKGROUND DO HEADER, FOOTER, DIV.COMO FAZEMOS */
+header, footer, #como-fazemos{
     /* Degrade */
     background: rgb(151,88,237);
     background: -moz-linear-gradient(-45deg, rgba(151,88,237,1) 0%, rgba(197,113,166,1) 50%, rgba(247,140,89,1) 100%);
@@ -48,11 +49,10 @@ header, footer{
     background: linear-gradient(135deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9758ed', endColorstr='#f78c59',GradientType=1 );
 }
-/* FIM HEADER E FOOTER */
+/* FIM HEADER, FOOTER, DIV.COMO FAZEMOS */
 
 /* BANNER */
 #banner{
-    width: 100vw;
     height: 500px;
     background-image: url('https://placeimg.com/1300/500/any');
     background-size: cover;
@@ -81,6 +81,7 @@ header, footer{
 
 #quem-somos div p{
     color: rgb(162, 116, 255);
+    font-size: 14pt;
 }
 
 #quem-somos div a{
@@ -93,3 +94,39 @@ header, footer{
 }
 
 /* FIM QUEM SOMOS */
+
+/* COMO FAZEMOS */
+#como-fazemos{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#como-fazemos h3{
+    font-size: 35pt;
+    margin-bottom: 10px;
+}
+
+#como-fazemos #personas{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.persona{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone-perso{
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+/* FIM COMO FAZEMOS */
