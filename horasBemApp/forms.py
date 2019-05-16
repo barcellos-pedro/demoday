@@ -10,3 +10,4 @@ class FaleAquiForm(forms.ModelForm):
             "assunto",
             "mensagem"
         ]
+        

@@ -1,5 +1,7 @@
 {% extends 'layout_base/main.html' %}
 
+{% load staticfiles %}
+
 {% block title %} Inicio {% endblock %}
 
 {% block content %}
@@ -48,5 +50,32 @@
                 </ul>    
             </div>
         </div>
+    </div>
+    <div id="facaParte">
+        <div>
+            <h3>Faça parte</h3>
+            <div id="eusou-container">
+                <div id="eusou-setinha">
+                    <p>Eu sou</p>
+                </div>
+                <div id="eusou-aluno">
+                    <p>Aluno</p>
+                </div>
+                <div id="eusou-ong">
+                    <p>ONG</p>
+                </div>
+            </div>
+            <div id="facaParte-cadastro">
+                <p> Ja tem cadastro ? <span> entrar </span></p>
+            </div>
+        </div>
+        <img src="{% static 'images/iconesFacaParte.png' %}" alt="">
+    </div>
+    <div id="faleAqui">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 {% endblock %}
