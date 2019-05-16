@@ -1,5 +1,17 @@
 {% extends 'layout_base/main.html' %}
 
+{% block title %} Inicio {% endblock %}
+
 {% block content %}
-    <h2>Foi</h2>
+    <div id="banner">
+        Banner
+    </div>
+    <div id="quem-somos">
+        <div>
+            <h3>Quem Somos</h3>
+            {% lorem 1 p %}
+            <a href="#"> Leia Mais </a>
+        </div>
+        <img src="https://placeimg.com/300/300/any" alt="">
+    </div>
 {% endblock %}

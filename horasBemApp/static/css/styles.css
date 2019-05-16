@@ -8,17 +8,12 @@
 
 }
 
+
+/* HEADER */
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Degrade */
-    background: rgb(151,88,237);
-    background: -moz-linear-gradient(-45deg, rgba(151,88,237,1) 0%, rgba(197,113,166,1) 50%, rgba(247,140,89,1) 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);
-    background: linear-gradient(135deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9758ed', endColorstr='#f78c59',GradientType=1 );
-
 }
 
 header #logo-home img{
@@ -37,3 +32,64 @@ header nav a{
     font-family: 'Oxygen', sans-serif;
     color: #fff;
 }
+
+header nav a:hover{
+    font-weight: bolder;
+}
+/* FIM HEADER */
+
+
+/* BACKGROUND DO HEADER E DO FOOTER */
+header, footer{
+    /* Degrade */
+    background: rgb(151,88,237);
+    background: -moz-linear-gradient(-45deg, rgba(151,88,237,1) 0%, rgba(197,113,166,1) 50%, rgba(247,140,89,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);
+    background: linear-gradient(135deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9758ed', endColorstr='#f78c59',GradientType=1 );
+}
+/* FIM HEADER E FOOTER */
+
+/* BANNER */
+#banner{
+    width: 100vw;
+    height: 500px;
+    background-image: url('https://placeimg.com/1300/500/any');
+    background-size: cover;
+}
+/* FIM BANNER */
+
+/* QUEM SOMOS */
+#quem-somos{
+    display: flex;
+    justify-content: space-around;
+    padding: 35px;
+}
+#quem-somos div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#quem-somos div h3{
+    text-align: center;
+    font-size: 25pt;
+    margin-bottom: 10px;
+    color: #9058FF;
+}
+
+#quem-somos div p{
+    color: rgb(162, 116, 255);
+}
+
+#quem-somos div a{
+    margin: 20px;
+    background-color: rgb(129, 72, 243);
+    padding: 10px;
+    color: #fff;
+    font-size: 15pt;
+    border-radius: 10px;
+}
+
+/* FIM QUEM SOMOS */
