@@ -20,4 +20,5 @@ from horasBemApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('entrar_aluno', views.entrarAluno),
 ]

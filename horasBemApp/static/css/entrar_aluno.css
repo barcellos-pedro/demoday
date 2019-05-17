@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+/* ENTRAR "ALUNO" */
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas: "section aside aside aside"
+                         "section aside aside aside";
+    grid-template-rows: 49vh 49vh;
+    grid-template-columns: 22vw 35vw;
+    grid-gap: 10px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#aluno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    grid-area: section;
+    background-color: white;
+}
+
+#aluno #icone-perfil img{
+    width: 200px;
+    size: 200px;
+    border-radius: 50%;
+    margin-bottom: 60px;
+}
+
+aside{
+     grid-area: aside;
+     background-color: white;
+}
+
+p{
+    margin: 0;
+}
+
+#aluno button{
+    margin-top: 150px;
+}
+
+.container {
+	margin: 0 auto;
+    display: flex;
+	border: 1px solid #ccc;
+}
+
+.item {
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+    font-size: 1.5em;
+    height: 320px;
+    width: 200px;
+    background-size: cover;
+}
+
+.grow1 {
+    flex-grow: 1;
+    background-image: url("/static/images/ongExample2.jpg");
+}
+
+.grow2 {
+    flex-grow: 2;
+    background-image: url("/static/images/ongExample2.jpg");
+}
+
+.ong_title{
+    margin-top: 35%;
+    margin-bottom: 30%;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+}
+
+.bt_vagas{
+    background-color: rgba(255, 87, 87, 0.9);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 25px;
+}
+
+#aluno button{
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 25px;
+}
+
+#aluno p{
+    
+}

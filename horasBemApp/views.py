@@ -10,3 +10,6 @@ def index(request):
 
     contexto = {'form':formulario}
     return render(request,'index.html', contexto)
+
+def entrarAluno(request):
+    return render(request, 'entrar_aluno.html'  )
