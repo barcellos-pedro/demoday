@@ -8,4 +8,4 @@ class FaleAqui(models.Model):
     mensagem = models.TextField(max_length=300)
 
     def __str__(self):
-        return "E-mail: "+ self.email + " | Assunto: "+ self.email
+        return "E-mail: "+ self.email + " | Assunto: "+ self.assunto
