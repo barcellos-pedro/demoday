@@ -6,7 +6,7 @@ body{
     grid-template-areas: "section aside aside aside"
                          "section aside aside aside";
     grid-template-rows: 49vh 49vh;
-    grid-template-columns: 22vw 35vw;
+    grid-template-columns: 23vw 35vw;
     grid-gap: 10px;
     font-family: 'PT Sans', sans-serif;
 }
@@ -16,6 +16,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    widows: 100%;
 }
 
 section{
@@ -35,12 +36,14 @@ aside{
      background-color: white;
 }
 
-p{
+h3{
     margin: 0;
+    width: 134px;
+    text-align: center;
 }
 
 #aluno button{
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .container {
@@ -93,8 +96,23 @@ p{
     border: none;
     border-radius: 4px;
     padding: 5px 25px;
+    font-weight: bold;
 }
 
 #aluno p{
-    
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 17px;
+    margin: 0;
+    font-weight: bold;
+}
+
+#aluno h2{
+    font-size: 35px;
+    text-shadow: 0px 3px 3px rgba(231, 131, 36, 0.5);
+}
+
+#aluno h3{
+    letter-spacing: 3px;
+    width: 182px;
 }

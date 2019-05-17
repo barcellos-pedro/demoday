@@ -164,7 +164,7 @@ header, #como-fazemos, #faleAqui{
     align-items: center;
 }
 
-#eusou-setinha, #eusou-aluno, #eusou-ong{
+#eusou-aluno, #eusou-ong{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,7 +175,7 @@ header, #como-fazemos, #faleAqui{
     border-radius: 5px;
 }
 
-#eusou-setinha, #eusou-aluno, #eusou-ong, #facaParte-cadastro p{
+#eusou-aluno, #eusou-ong, #facaParte-cadastro p{
     color: #ee8c58;
     font-size: 15pt;
 }
@@ -189,10 +189,21 @@ header, #como-fazemos, #faleAqui{
     padding-right: 5px;
 }
 
+#eusou-setinha{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
 #facaParte img{
     height: 320px;
     width: 320px;
 }
+
+#facaParte #eusou-container #eusou-setinha p{
+    margin-top: -10px;
+}
+
 /* FIM DO FAÇA PARTE */
 
 /* FALE AQUI */
