@@ -100,6 +100,11 @@ header, #como-fazemos, #faleAqui{
     border-radius: 10px;
 }
 
+#quem-somos img{
+    width: 450px;
+    height: 450px;
+}
+
 /* FIM QUEM SOMOS */
 
 /* COMO FAZEMOS */
@@ -132,6 +137,18 @@ header, #como-fazemos, #faleAqui{
     height: 160px;
     border-radius: 100%;
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color:#9058FF;
+    font-size: 70px;
+}
+
+.icone-perso span{
+    font-size: 14pt;
+    text-align: center;
 }
 /* FIM COMO FAZEMOS */
 
@@ -176,8 +193,14 @@ header, #como-fazemos, #faleAqui{
 }
 
 #eusou-aluno, #eusou-ong, #facaParte-cadastro p{
+    margin-top: 8px;
     color: #ee8c58;
     font-size: 15pt;
+    text-align: center;
+}
+
+#facaParte-cadastro span:hover{
+    background-color: #e4621c;
 }
 
 #facaParte-cadastro span{
@@ -185,8 +208,7 @@ header, #como-fazemos, #faleAqui{
     color: white;
     border-radius: 10%;
     font-size: 12pt;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 8px;
 }
 
 #eusou-setinha{
@@ -202,6 +224,11 @@ header, #como-fazemos, #faleAqui{
 
 #facaParte #eusou-container #eusou-setinha p{
     margin-top: -10px;
+}
+
+#eusou-aluno:hover, #eusou-ong:hover{
+    background-color: #cecece;
+    color: #fff;
 }
 
 /* FIM DO FAÇA PARTE */
@@ -338,7 +365,7 @@ form div button:hover{
 footer{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
 }
 
@@ -347,10 +374,60 @@ footer div:first-child ul{
     flex-direction: column;
     flex-wrap: wrap;
     height: 100px;
+    color: #9058FF;
+}
+
+footer div:first-child ul li{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+footer div:first-child ul li a:hover{
+    color: rgb(127, 64, 255);
+}
+
+footer div:last-child{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 footer div:last-child ul{
+    margin-top: 15px;
     display: flex;
+}
+
+footer div:last-child ul a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+footer div:last-child ul a:last-child{
+    margin-right: 0;
+}
+
+
+footer div:last-child ul a li{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    color: #fff;
+    background-color: #9058FF;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    font-size: 1.8em;
+}
+
+footer div:last-child ul a li:hover{
+    background-color: rgb(107, 50, 223);
+}
+
+footer div:last-child ul a:last-child{
+    margin-right: 0;
 }
 
 /* FIM FOOTER */
