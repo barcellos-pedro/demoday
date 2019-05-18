@@ -78,23 +78,23 @@
             {{ form.non_field_errors }}
             <div class="form-group">
                 {{ form.nome.errors }}
-                <label for="{{ form.nome.id_for_label }}">Nome: </label>
                 {{ form.nome }}
+                <label for="{{ form.nome.id_for_label }}" class="nome-label"><span class="conteudo-nome">Nome:</span></label>
             </div>
             <div class="form-group">
                 {{ form.email.errors }}
-                <label for="{{ form.email.id_for_label }}">E-mail: </label>
                 {{ form.email }}
+                <label for="{{ form.email.id_for_label }}" class="nome-label"><span class="conteudo-nome">E-mail:</span></label>
             </div>
             <div class="form-group">
                 {{ form.assunto.errors }}
-                <label for="{{ form.assunto.id_for_label }}">Assunto: </label>
                 {{ form.assunto }}
+                <label for="{{ form.assunto.id_for_label }}" class="nome-label"><span class="conteudo-nome">Assunto:</span></label>
             </div>
             <div class="form-group">
                 {{ form.mensagem.errors }}
-                <label for="{{ form.mensagem.id_for_label }}">Mensagens: </label>
                 {{ form.mensagem }}
+                <label for="{{ form.mensagem.id_for_label }}" class="nome-label"><span id="lb-textArea" class="conteudo-nome">Mensagens:</span></label>
             </div>
             <div>
                 <button type="submit">Enviar</button>
