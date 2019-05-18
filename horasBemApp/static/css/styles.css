@@ -367,6 +367,7 @@ footer{
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
+    background-color: #d4d4d4;
 }
 
 footer div:first-child ul{
@@ -431,3 +432,5 @@ footer div:last-child ul a:last-child{
 }
 
 /* FIM FOOTER */
+
+

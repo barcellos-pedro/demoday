@@ -45,7 +45,7 @@ class Faculdade(models.Model):
     def __str__(self):
         return self.nome
 
-class aluno(models.Model):
+class Aluno(models.Model):
     nome = models.CharField(max_length=100)
     cpf = models.CharField(max_length=12)
     rg = models.CharField(max_length=10)
@@ -63,7 +63,7 @@ class aluno(models.Model):
     def __str__(self):
         return self.nome
 
-class ong(models.Model):
+class Ong(models.Model):
     nome = models.CharField(max_length=45)
     nome_social = models.CharField(max_length=45)
     sigla = models.CharField(max_length=6)

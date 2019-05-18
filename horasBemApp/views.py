@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from horasBemApp.forms import FaleAquiForm
+from horasBemApp.forms import FaleAquiForm, CadAlunoForm
 
 # Create your views here.
 def index(request):
@@ -11,5 +11,13 @@ def index(request):
     contexto = {'form':formulario}
     return render(request,'index.html', contexto)
 
+## Aluno
 def entrarAluno(request):
-    return render(request, 'entrar_aluno.html'  )
+    return render(request, 'entrar_aluno.html')
+
+def CadAluno(request):
+    formulario = CadAlunoForm(request.POST or None)
+    
+
+    contexto = {'form':formulario}
+    return render(request,'cadastroAluno.html',contexto)

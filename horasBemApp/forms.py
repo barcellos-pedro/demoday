@@ -1,5 +1,5 @@
 from django import forms
-from horasBemApp.models import FaleAqui
+from horasBemApp.models import FaleAqui, Aluno
 
 class FaleAquiForm(forms.ModelForm):
     class Meta:
@@ -10,4 +10,11 @@ class FaleAquiForm(forms.ModelForm):
             "assunto",
             "mensagem"
         ]
-        
+
+class CadAlunoForm(forms.ModelForm):
+    class Meta:
+        model = Aluno
+        fields = [
+            "nome",
+            "email"
+        ]
