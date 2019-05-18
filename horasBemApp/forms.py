@@ -1,5 +1,5 @@
 from django import forms
-from horasBemApp.models import FaleAqui, Aluno
+from horasBemApp.models import *
 
 class FaleAquiForm(forms.ModelForm):
     class Meta:
