@@ -4,11 +4,15 @@ from horasBemApp.forms import *
 # Create your views here.
 def index(request):
     formulario = FaleAquiForm(request.POST or None)
+    formLogin = Login(request.POST or None)
     if formulario.is_valid():
         formulario.save()
         formulario = FaleAquiForm()
 
-    contexto = {'form':formulario}
+    contexto = {
+        'form':formulario,
+        'formLogin':formLogin
+    }
     return render(request,'index.html', contexto)
 
 ## Aluno

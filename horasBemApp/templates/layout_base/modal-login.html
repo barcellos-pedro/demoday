@@ -1,0 +1,19 @@
+<div class="login-container">
+    <form method="POST" class="corpo-modal animate">
+        <span class="fecha" title="Fechar Modal">X</span>
+        <div class="container-form">
+            {% csrf_token %}
+            {{formLogin.as_p}}
+        </div>
+        <button type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <div class="footer-login">
+            <button class="btnCancelar">Cancelar</button>
+            <span class="esqueci">
+                <a href="">Esqueceu a Senha?</a>
+            </span>
+        </div>
+    </form>
+</div>

@@ -9,11 +9,15 @@
     
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <script src="{% static 'javascript/script.js' %}" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
     {% block css %}{% endblock %}
 
     <title>{% block title %} Titulo {% endblock %}</title>
 </head>
 <body>
+    {% include "layout_base/modal-login.html" %}
     {% include "layout_base/header.html" %}
     <div class="container">
         {% block content %}

@@ -20,8 +20,26 @@ class CadAlunoForm(forms.ModelForm):
     email = forms.CharField(label='E-mail')
     class Meta:
         model = Aluno
-        fields = '__all__'
+        fields = [
+            'nome',
+            'cpf',
+            'rg',
+            'dt_Nascimento',
+            'Instituicao',
+            'rua',
+            'numero',
+            'bairro',
+            'cep',
+            'cidade',
+            'estado'
+        ]
         widgets = {
             'dt_Nascimento': forms.DateInput(attrs={'type': 'date'})
         }
-        
+
+class Login(forms.ModelForm):
+    email = forms.EmailField(label="E-mail")
+    senha = forms.CharField(label="Senha", widget=forms.PasswordInput)
+    class Meta:
+        model = Usuarios
+        fields = '__all__'
