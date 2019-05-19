@@ -24,4 +24,3 @@ class CadAlunoForm(forms.ModelForm):
         widgets = {
             'dt_Nascimento': forms.DateInput(attrs={'type': 'date'})
         }
-        

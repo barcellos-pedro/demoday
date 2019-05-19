@@ -1,5 +1,4 @@
 from django.contrib import admin
-<<<<<<< HEAD
 from horasBemApp.models import FaleAqui, Aluno, Faculdade, Ong
 
 admin.site.site_title = "Admin Horas do bem"
