@@ -1,5 +1,7 @@
 .vscode
 
+.idea
+
 #DLL files
 __pychace__
 
