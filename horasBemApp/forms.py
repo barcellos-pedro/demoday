@@ -1,7 +1,9 @@
+import datetime
 from django import forms
 from horasBemApp.models import FaleAqui, Aluno
 
 class FaleAquiForm(forms.ModelForm):
+    email = forms.CharField(label='E-mail')
     class Meta:
         model = FaleAqui
         fields = [
@@ -12,9 +14,14 @@ class FaleAquiForm(forms.ModelForm):
         ]
 
 class CadAlunoForm(forms.ModelForm):
+    ##dt_Nascimento = forms.DateField(label='Data de Nascimento')
+    cpf = forms.CharField(label='CPF')
+    rg = forms.CharField(label='RG')
+    email = forms.CharField(label='E-mail')
     class Meta:
         model = Aluno
-        fields = [
-            "nome",
-            "email"
-        ]
+        fields = '__all__'
+        widgets = {
+            'dt_Nascimento': forms.DateInput(attrs={'type': 'date'})
+        }
+        

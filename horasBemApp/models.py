@@ -58,7 +58,7 @@ class Aluno(models.Model):
     bairro = models.CharField(max_length=45)
     cidade = models.CharField(max_length=45)
     estado = models.CharField(max_length=2, choices=estado_opc)
-    foto = models.ImageField(upload_to='')
+    foto = models.ImageField(upload_to='',blank=False)
 
     def __str__(self):
         return self.nome

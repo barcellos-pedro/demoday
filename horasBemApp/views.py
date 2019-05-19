@@ -17,7 +17,8 @@ def entrarAluno(request):
 
 def CadAluno(request):
     formulario = CadAlunoForm(request.POST or None)
-    
-
+    if formulario.is_valid():
+        if formulario.save():
+            redirect('inicioSite')
     contexto = {'form':formulario}
     return render(request,'cadastroAluno.html',contexto)
