@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from horasBemApp.forms import FaleAquiForm, CadAlunoForm
+from horasBemApp.forms import *
 
 # Create your views here.
 def index(request):
