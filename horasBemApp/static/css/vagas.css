@@ -27,7 +27,6 @@ section{
 #aluno #icone-perfil img{
     width: 200px;
     size: 200px;
-    border-radius: 50%;
     margin-bottom: 60px;
 }
 
@@ -73,26 +72,14 @@ h3{
 }
 
 .ong_title{
-    margin-top: 35%;
-    margin-bottom: 20%;
     font-weight: bold;
-    font-size: 40px;
-    color: white;
-}
-
-.bt_vagas{
-    background-color: rgba(255, 87, 87, 0.9);
-    color: white;
     font-size: 20px;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 25px;
+    color: white;
+    margin-top: 25px;
 }
 
-.bt_vagas:hover{
-    background-color: white;
-    color: rgba(255, 87, 87, 0.9);
-    cursor: pointer;
+.ong_title:nth-child(2n+1){
+    text-decoration: underline;
 }
 
 #aluno button{
@@ -122,6 +109,33 @@ h3{
 #aluno h3{
     letter-spacing: 3px;
     width: 182px;
+}
+
+.bt_vagas{
+    background-color: rgba(255, 87, 87, 0.9);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 25px;
+    margin-top: 5px;
+}
+
+.bt_vagas:hover{
+    background-color: white;
+    color: rgba(255, 87, 87, 0.9);
+    cursor: pointer;
+}
+
+span{
+    font-weight: bold;
+}
+
+.img_vaga{
+    margin-top: 10px;
+    width: 100px;
+    height: 90px;
+    border-radius: 50%;
 }
 
 #linha{

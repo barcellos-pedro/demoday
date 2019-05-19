@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.index,name='inicioSite'),
     path('entrar_aluno', views.entrarAluno,name='areaAluno'),
     path('cadastroAluno', views.CadAluno,name='cadAluno'),
+    path('vagas', views.vagas, name='areaVagas'),
 ]

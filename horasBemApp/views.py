@@ -17,6 +17,10 @@ def index(request):
 
 ## Aluno
 def entrarAluno(request):
+    alunos = Aluno.objects.all() #OBJECTS - salva o conjunto de objetos que foram cadastrados
+    contexto = {
+        'alunos': alunos
+    }
     return render(request, 'entrar_aluno.html')
 
 def CadAluno(request):
@@ -26,3 +30,7 @@ def CadAluno(request):
             redirect('inicioSite')
     contexto = {'form':formulario}
     return render(request,'cadastroAluno.html',contexto)
+
+## Vagas
+def vagas(request):
+    return render(request, 'vagas.html')
