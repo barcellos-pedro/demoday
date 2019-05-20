@@ -1,8 +1,7 @@
 /* BANNER */
 #banner{
-    height: 500px;
-    background-image: url('https://placeimg.com/1300/500/any');
-    background-size: cover;
+    height: 450px;
+    background-color: #ee8c58;
 }
 /* FIM BANNER */
 
@@ -11,6 +10,8 @@
     display: flex;
     justify-content: space-around;
     padding: 35px;
+    height: 600px;
+
 }
 #quem-somos div{
     width: 50%;
@@ -31,15 +32,6 @@
     font-size: 14pt;
 }
 
-#quem-somos div a{
-    margin: 20px;
-    background-color: rgb(129, 72, 243);
-    padding: 10px;
-    color: #fff;
-    font-size: 15pt;
-    border-radius: 10px;
-}
-
 #quem-somos img{
     width: 450px;
     height: 450px;
@@ -47,7 +39,7 @@
 
 /* FIM QUEM SOMOS */
 
-/* COMO FAZEMOS */
+/* COMO FUNCIONA */
 #como-fazemos{
     color: #fff;
     display: flex;
@@ -55,7 +47,7 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
-    height: 350px;
+    height: 627px;
 }
 
 
@@ -73,8 +65,8 @@
 }
 
 .icone-perso{
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     background-color: #fff;
     display: flex;
@@ -87,7 +79,7 @@
 }
 
 .icone-perso span{
-    font-size: 14pt;
+    font-size: 12pt;
     text-align: center;
 }
 /* FIM COMO FAZEMOS */
@@ -95,10 +87,11 @@
 /* FAÇA PARTE */
 #facaParte{
     margin-left: 150px;
-    margin-top: 30px;
+    margin-top: 90px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-around;
+    height: 627px;
 }
 
 #facaParte div{
@@ -106,16 +99,12 @@
     flex-direction: column;
 }
 
-#facaParte h3{
-    font-size: 35pt;
-    color: #ee8c58;
-}
 
 #eusou-container{
     background-color: #ee8c58;
     height: 190px;
-    width: 220px;
-    border-radius: 10%;
+    width: 300px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,6 +160,7 @@
     color: #fff;
 }
 
+
 /* FIM DO FAÇA PARTE */
 
 /* FALE AQUI */
@@ -179,22 +169,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 15px;
 }
 
 #faleAqui h3{
     color: #fff;
+    font-size: 20pt;
 }
 
 
 form{
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
+    background-color: transparent;
+    padding: 10px;
+    width: 400px;
 }
 
 .form-group{
-    margin-bottom: 25px; 
+    margin-bottom: 10px; 
     width: 100%;
     display: flex;
     position: relative;
@@ -205,10 +196,10 @@ form{
     height: 100%;
     width: 100%;
     padding-top: 20px;
-    color:#595f6e;
+    color:#090f1f;
     border: none;
     outline: none;
-    background-color: rgba(241, 241, 241, 0.240);
+    background-color: rgba(141, 127, 127, 0.24);
 }
 
 .form-group label{
@@ -218,7 +209,7 @@ form{
     width: 100%;
     height: 100%;
     pointer-events: none;
-    border-bottom: 2px solid #c0c0c0;
+    border-bottom: 2px solid #1d0a0a;
     transition: all 1s ease
 }
 
@@ -259,14 +250,14 @@ form{
 .form-group input:valid + .nome-label .conteudo-nome{
     transform: translateY(-80%);
     font-size: 14px;
-    color: #9058FF;
+    color: rgb(71, 68, 66);
 }
 
 .form-group textarea:focus + .nome-label .conteudo-nome, 
 .form-group textarea:valid + .nome-label .conteudo-nome{
     transform: translateY(-1180%);
     font-size: 14px;
-    color: #9058FF;
+    color: rgb(71, 68, 66);
 }
 
 .form-group input:focus + .nome-label::after,

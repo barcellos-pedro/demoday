@@ -9,9 +9,8 @@
 
 }
 
-
 h3{
-    font-size: 35pt;
+    font-size: 40pt;
     margin-bottom: 10px;
     color: #fff;
     text-shadow: 0px 3px 3px rgba(146, 146, 146, 0.5);
@@ -42,7 +41,7 @@ header nav a{
 }
 
 header nav a:hover{
-    font-weight: bolder;
+  
 }
 /* FIM HEADER */
 
@@ -61,14 +60,29 @@ header, #como-fazemos, #faleAqui{
 
 /* FOOTER */
 footer{
+    padding: 30px;
+    background-color: #7a698d;
+    height: 90px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    background-color: #d4d4d4;
+    justify-content: flex-end;
 }
 
-footer div:first-child ul{
+footer div p{
+   font-size: 10pt; 
+   display: flex;
+   justify-content: flex-end;
+
+}
+article{
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*footer div:first-child ul{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -128,6 +142,7 @@ footer div:last-child ul a li:hover{
 footer div:last-child ul a:last-child{
     margin-right: 0;
 }
+*/
 
 /* FIM FOOTER */
 
@@ -147,7 +162,7 @@ button{
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
 }
 
 button:hover{
