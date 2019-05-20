@@ -60,14 +60,29 @@ header, #como-fazemos, #faleAqui{
 
 /* FOOTER */
 footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
+    padding: 30px;
     background-color: #7a698d;
+    height: 90px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-footer div:first-child ul{
+footer div p{
+   font-size: 10pt; 
+   display: flex;
+   justify-content: flex-end;
+
+}
+article{
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*footer div:first-child ul{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -127,6 +142,7 @@ footer div:last-child ul a li:hover{
 footer div:last-child ul a:last-child{
     margin-right: 0;
 }
+*/
 
 /* FIM FOOTER */
 
