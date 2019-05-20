@@ -10,7 +10,7 @@ def index(request):
         formulario = FaleAquiForm()
 
     if formLogin.is_valid():
-        formLogin.objects.
+        formLogin.objects.all()
     contexto = {
         'form':formulario,
         'formLogin':formLogin

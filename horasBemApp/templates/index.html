@@ -8,34 +8,30 @@
 
 {% block content %}
     <div id="banner">
-        Banner
+            
     </div>
     <div id="quem-somos">
         <div>
             <h3>Quem Somos</h3>
             {% lorem 1 p %}
-            <a href="#"> Faça parte </a>
         </div>
         <img src="{% static 'images/iconesFacaParte.png' %}" alt="">
     </div>
     <div id="como-fazemos">
-        <h3>Como Fazemos</h3>
+        <h3>Como Funciona</h3>
         <div id="personas">
             <div class="persona">
                 <div class="icone-perso">
-                    <i class="fas fa-user"></i>
+                        <img src="https://img.icons8.com/wired/80/000000/students.png">
                     <span>Aluno</span>
                 </div>
-                <ul>
-                    <li>Como fazemos</li>
-                    <li>Como fazemos</li>
-                    <li>Como fazemos</li>
-                    <li>Como fazemos</li>
-                </ul>    
+                <p>
+
+                </p>   
             </div>
             <div class="persona">
                 <div class="icone-perso">
-                    <i class="fas fa-home"></i>
+                        <img src="https://img.icons8.com/carbon-copy/80/000000/organization.png">
                     <span>ONG</span>
                 </div>
                 <ul>
@@ -47,8 +43,9 @@
             </div>
             <div class="persona">
                 <div class="icone-perso">
-                    <i class="far fa-clock"></i>
-                    <span>Horas Complementares  </span>
+                        <img src="https://img.icons8.com/carbon-copy/80/000000/file.png">
+                    <span>Horas <br>
+                        Complementares  </span>
                 </div>
                 <ul>
                     <li>Como fazemos</li>
@@ -78,13 +75,13 @@
                 </a>
             </div>
             <div id="facaParte-cadastro">
-                <p> Ja tem cadastro ? <a href=""><span> Entrar </span> </a></p>
+                <p> Já possui cadastro ? <a href=""><span>ENTRAR</span> </a></p>
             </div>
         </div>
         <img src="{% static 'images/iconesFacaParte.png' %}" alt="">
     </div>
     <div id="faleAqui">
-        <h3>Fale Aqui</h3>
+        <h3>Fale Conosco</h3>
         <form method="POST">
             {% csrf_token %}
             {{ form.non_field_errors }}
@@ -106,7 +103,7 @@
             <div class="form-group">
                 {{ form.mensagem.errors }}
                 {{ form.mensagem }}
-                <label for="{{ form.mensagem.id_for_label }}" class="nome-label"><span id="lb-textArea" class="conteudo-nome">Mensagens:</span></label>
+                <label for="{{ form.mensagem.id_for_label }}" class="nome-label"><span id="lb-textArea" class="conteudo-nome">Mensagen:</span></label>
             </div>
             <div>
                 <button type="submit">Enviar</button>
