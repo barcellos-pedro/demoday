@@ -28,6 +28,26 @@ estado_opc = [
     ('SP', 'São Paulo'),
     ('TO', 'Tocantins')
 ]
+
+instituicao_opc = [
+    ('MACK', 'Universidade Presbiteriana Mackenzie'),
+    ('PUCSP', 'Pontifícia Universidade Católica de São Paulo'),
+    ('UMESP', 'Universidade Metodista de São Paulo'),
+    ('UNAERP', 'Universidade de Ribeirão Preto'),
+    ('UNIMEP', 'Universidade Metodista de Piracicaba'),
+    ('UNISA', 'Universidade de Santo Amaro'),
+    ('UNISANT ANNA', 'Universidade Sant Anna'),
+    ('FEBASP', 'Centro Universitário Belas Artes de São Paulo'),
+    ('FMU', 'Centro Universitário das Faculdades Metropolitanas Unidas'),
+    ('SENAC', 'Centro Universitário Senac-São Paulo'),
+    ('UNASP', 'Centro Universitário Adventista de São Paulo'),
+    ('UNISAL', 'Centro Universitário Salesiano de São Paulo'),
+    ('BSP', 'Business School São Paulo'),
+    ('FGV', 'Fundação Getúlio Vargas'),
+    ('ESPM', 'Escola Superior de Propaganda e Marketing'),
+    ('FCL', 'Faculdade Cásper Líbero'),
+    ('FAPCOM', 'Faculdade Paulus de Comunicação e Tecnologia')
+]
 # Create your models here.
 class Usuarios(models.Model):
     email = models.EmailField()
@@ -42,18 +62,12 @@ class FaleAqui(models.Model):
     def __str__(self):
         return "E-mail: "+ self.email + " | Assunto: "+ self.assunto
 
-class Instituicao(models.Model):
-    nome = models.CharField(max_length=140)
-
-    def __str__(self):
-        return self.nome
-
 class Aluno(models.Model):
     nome = models.CharField(max_length=100)
     cpf = models.CharField(max_length=12)
     rg = models.CharField(max_length=10)
     dt_Nascimento = models.DateField()
-    Instituicao = models.ForeignKey(Instituicao, on_delete=models.CASCADE)
+    Instituicao = models.CharField(max_length=15, choices=instituicao_opc)
     rua = models.CharField(max_length=140)
     numero = models.IntegerField()
     cep = models.CharField(max_length=10)
@@ -61,6 +75,7 @@ class Aluno(models.Model):
     cidade = models.CharField(max_length=45)
     estado = models.CharField(max_length=2, choices=estado_opc)
     usuario = models.ForeignKey(Usuarios, on_delete=models.CASCADE)
+    foto = models.ImageField(upload_to='', null=True)
 
     def __str__(self):
         return self.nome

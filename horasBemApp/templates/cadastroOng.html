@@ -2,12 +2,12 @@
 
 {% load staticfiles %}
 
-{% block title %} Cadastro de Aluno {% endblock %}
+{% block title %} Cadastro Ong {% endblock %}
 {% block css %} <link rel="stylesheet" href="{% static 'css/cadastro.css' %}"> {% endblock %}
 
 {% block content %}
     <div class="formulario">
-        <h2> Cadastro de Aluno </h2>
+        <h2> Cadastro Ong </h2>
         <form method="POST">
             {% csrf_token %}
                 {{form.as_p}}
