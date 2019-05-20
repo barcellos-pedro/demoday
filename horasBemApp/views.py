@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from horasBemApp.forms import FaleAquiForm, CadAlunoForm, Login
+from horasBemApp.forms import FaleAquiForm, CadAlunoForm, Login, CadOngForm
 from horasBemApp.models import Usuarios, FaleAqui, Aluno, Ong
 
 # Create your views here.
@@ -28,16 +28,11 @@ def entrarAluno(request):
 
 def CadAluno(request):
     formulario = CadAlunoForm(request.POST or None)
-    if request.method == 'POST':
-        if formulario.is_valid():
-            formulario.save()
+    if formulario.is_valid():
+        if formulario.save():
             redirect('inicioSite')
     contexto = {'form':formulario}
     return render(request,'cadastroAluno.html',contexto)
-
-## Vagas
-def vagas(request):
-    return render(request, 'vagas.html')
 
 def CadOng(request):
     formulario = CadOngForm(request.POST or None)
@@ -46,4 +41,8 @@ def CadOng(request):
             redirect('inicioSite')
     contexto = {'form':formulario}
     return render(request,'cadastroOng.html',contexto)
+
+## Vagas
+def vagas(request):
+    return render(request, 'vagas.html')
 

@@ -13,11 +13,14 @@ class FaleAquiForm(forms.ModelForm):
             "mensagem"
         ]
 
+class Login(forms.ModelForm):
+    email = forms.EmailField(label="E-mail")
+    senha = forms.CharField(label="Senha", widget=forms.PasswordInput)
+    class Meta:
+        model = Usuarios
+        fields = '__all__'
+
 class CadAlunoForm(forms.ModelForm):
-    dt_Nascimento = forms.DateField(label='Data de Nascimento')
-    cpf = forms.CharField(label='CPF')
-    rg = forms.CharField(label='RG')
-    email = forms.CharField(label='E-mail')
     class Meta:
         model = Aluno
         fields = [
@@ -28,22 +31,12 @@ class CadAlunoForm(forms.ModelForm):
             'Instituicao',
             'rua',
             'numero',
-            'bairro',
             'cep',
+            'bairro',
             'cidade',
             'estado',
             'foto'
         ]
-        widgets = {
-            'dt_Nascimento': forms.DateInput(attrs={'type': 'date'})
-        }
-
-class Login(forms.ModelForm):
-    email = forms.EmailField(label="E-mail")
-    senha = forms.CharField(label="Senha", widget=forms.PasswordInput)
-    class Meta:
-        model = Usuarios
-        fields = '__all__'
 
 class CadOngForm(forms.ModelForm):
     class Meta:
@@ -59,3 +52,4 @@ class CadOngForm(forms.ModelForm):
             "cidade",
             "estado"
         ]
+
