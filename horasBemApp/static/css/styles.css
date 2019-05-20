@@ -162,7 +162,8 @@ button:hover{
 
 .login-container form{
     padding: 16px;
-    width: 45%;
+    width: 30%;
+    height: 50%;
 }
 
 .login-container{
@@ -228,6 +229,7 @@ button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 90px;
     width: 100%;
     
 }
@@ -252,4 +254,16 @@ button:hover{
 #entrarNav{
     background-color: transparent;
     width: auto;
+    cursor: pointer;
+}
+
+.titulo-modal{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 14pt;
+    border-bottom: 1px solid #d4d4d4;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

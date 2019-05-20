@@ -2,12 +2,15 @@
     <form method="POST" class="corpo-modal animate">
         <span class="fecha" title="Fechar Modal">X</span>
         <div class="container-form">
+            <span class="titulo-modal">
+                <i class="fas fa-users"></i> <span> &nbsp&nbsp&nbsp Acessar Conta</span>
+            </span>
             {% csrf_token %}
             {{formLogin.as_p}}
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Entrar</button>
         <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
+            <input type="checkbox" checked="checked" name="remember"> Manter Conectado
         </label>
         <div class="footer-login">
             <button class="btnCancelar">Cancelar</button>
