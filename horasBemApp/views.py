@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from horasBemApp.forms import FaleAquiForm, Login, CadOngForm, CadAlunoForm
 from horasBemApp.models import Usuario, FaleAqui, Ong, Aluno
 
@@ -18,10 +18,10 @@ def index(request):
     return render(request,'index.html', contexto)
 
 ## Aluno
-def entrarAluno(request):
+def entrarAluno(request,pk):
     data = {}
     data['ongs'] = Ong.objects.all() #OBJECTS - salva o conjunto de objetos que foram cadastrados
-    
+    data['usuario'] = Aluno.objects.get(pk=pk)
     return render(request, 'entrar_aluno.html', data)
 
 def CadOng(request):
@@ -68,17 +68,17 @@ def login_user(request):
     contexto = {
         'form':formLogin
     }
-
-    if request.POST:
-        email = request.POST.get('email')
-        senha = request.POST.get('senha')
-
-        user = Usuario.objects.get(email=email)
-
-
-        if (senha == user.senha):
-            return redirect('/entrar_aluno')
+    # if request.POST:
+    email = request.POST.get('email')
+    senha = request.POST.get('senha')
+    if formLogin.is_valid():
+        usuario = Usuario.objects.all().get(email=email)
+        if usuario is not None:
+            if (senha == usuario.senha):
+                return redirect('/entrar_aluno/%s' % usuario.id)
+            else:
+                messages.error(request,"Usuario e senha invalidos")
+            return redirect('/login')
         else:
-            messages.error(request,"Usuario e senha invalidos")
-        return redirect('/login')
+            messages.error(request, "Usuario e senha invalidos")
     return render(request,'login.html',contexto)
