@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="login">
+        <div class="imagem">
+            <img src="{% static 'images/img_avatar2.png' %}" alt="">
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <label for="username">Usuário:</label>
+            <input type="text" placeholder="exemplo@exemplo.com" name="username" size="10">
+            <label for="password">Senha:</label>
+            <input type="password" placeholder="Senha" name="password">
+            <button type="submit">Entrar</button>
+        </form>
+        <div class="esqueci">
+            <span class="psw"><a href="#">Esqueci a senha?</a></span>
+        </div>
+    </div>
+</body>
+</html>

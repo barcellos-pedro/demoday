@@ -1,3 +1,5 @@
+from django.contrib.auth import authenticate
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from horasBemApp.forms import FaleAquiForm, CadAlunoForm, Login, CadOngForm
 from horasBemApp.models import Usuarios, FaleAqui, Aluno, Ong
@@ -5,16 +7,12 @@ from horasBemApp.models import Usuarios, FaleAqui, Aluno, Ong
 # Create your views here.
 def index(request):
     formulario = FaleAquiForm(request.POST or None)
-    formLogin = Login(request.POST or None)
     if formulario.is_valid():
         formulario.save()
         formulario = FaleAquiForm()
 
-    if formLogin.is_valid():
-        formLogin.objects.all()
     contexto = {
         'form':formulario,
-        'formLogin':formLogin
     }
     return render(request,'index.html', contexto)
 
@@ -46,3 +44,7 @@ def CadOng(request):
 def vagas(request):
     return render(request, 'vagas.html')
 
+##login
+def login_user(request):
+
+    return render(request,'login.html')

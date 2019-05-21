@@ -1,5 +1,7 @@
 import datetime
 from django import forms
+from django.contrib.auth.models import User
+
 from horasBemApp.models import Usuarios, FaleAqui, Aluno, Ong
 
 class FaleAquiForm(forms.ModelForm):
@@ -17,8 +19,11 @@ class Login(forms.ModelForm):
     email = forms.EmailField(label="E-mail")
     senha = forms.CharField(label="Senha", widget=forms.PasswordInput)
     class Meta:
-        model = Usuarios
-        fields = '__all__'
+        model = User
+        fields = [
+            'email',
+            'password'
+        ]
 
 class CadAlunoForm(forms.ModelForm):
     class Meta:

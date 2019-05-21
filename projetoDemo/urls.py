@@ -26,4 +26,6 @@ urlpatterns = [
     path('cadastroAluno', views.CadAluno,name='cadAluno'),
     path('vagas', views.vagas, name='areaVagas'),
     path('cadastroOng', views.CadOng,name='cadOng'),
+    path('login',views.login_user, name='login'),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
