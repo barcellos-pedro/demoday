@@ -11,14 +11,14 @@
 <body>
     <section id="aluno">
         <div id="icone-perfil">
-            <img src="{% static 'images/cid.jpg' %}" alt="">
+            <img src="{% static 'images/euDrake.jpg' %}" alt="">
         </div>
-        <p>Centro de inclusão digital</p>
-        <h2>CID</h2>
-        <h3>Colaboradores: 3</h3>
-        <br>
-        <h3>Horas totais: 120 horas</h3>
-        <button onclick="location.href='#'" type="button">Sair</button>
+        <p>{{usuario.nome}}</p>
+        <h2>{{usuario.Instituicao}}</h2>
+        <h3>Horas desejadas: 180 horas</h3>
+        <a href="{% url 'inicioSite' %}">
+            <button type="button">Sair</button>
+        </a>
     </section>
 
     <aside>
@@ -26,47 +26,16 @@
         <div id="linha">
 
         </div>
+        
+    {% for vaga in vagas %}
         <div class="container">
-            <div class="item grow1">
-                <img class="img_vaga" src="{% static 'images/cid.jpg' %}" alt="">
-                <p class=ong_title>Workshop Internet 1</p>
-                <p class=ong_title>Provedores de E-mail e seus serviços</p>
-                <button class=bt_vagas> <span> + </span> Detalhes </button>
-            </div>
-            <div class="item grow1">
-                    <img class="img_vaga" src="{% static 'images/cid.jpg' %}" alt="">
-                <p class=ong_title>Workshop Internet 1</p>
-                <p class=ong_title>Provedores de E-mail e seus serviços</p>
-                <button class=bt_vagas> <span> + </span> Detalhes </button>
-            </div>
-            <div class="item grow1">
-                    <img class="img_vaga" src="{% static 'images/cid.jpg' %}" alt="">
-                <p class=ong_title>Workshop Internet 1</p>
-                <p class=ong_title>Provedores de E-mail e seus serviços</p>
-                <button class=bt_vagas> <span> + </span> Detalhes </button>
-            </div>
+            <p>{{vaga.nome_vaga}}</p>
+            <p>{{vaga.detalhes}}</p>
+        <a href="">
+            <button class="bt_vagas">Candidatar-se</button>
+        </a>
         </div>
-
-        <div class="container">
-            <div class="item grow2">
-                <img class="img_vaga" src="{% static 'images/cid.jpg' %}" alt="">
-                <p class=ong_title>Workshop Internet 1</p>
-                <p class=ong_title>Provedores de E-mail e seus serviços</p>
-                <button class=bt_vagas> <span> + </span> Detalhes </button>
-            </div>
-            <div class="item grow2">
-                <img class="img_vaga" src="{% static 'images/cid.jpg' %}" alt="">
-                <p class=ong_title>Workshop Internet 1</p>
-                <p class=ong_title>Provedores de E-mail e seus serviços</p>
-                <button class=bt_vagas> <span> + </span> Detalhes </button>
-            </div>
-            <div class="item grow2">
-                <img class="img_vaga" src="{% static 'images/cid.jpg' %}" alt="">
-                <p class=ong_title>Workshop Internet 1</p>
-                <p class=ong_title>Provedores de E-mail e seus serviços</p>
-                <button class=bt_vagas> <span> + </span> Detalhes </button>
-            </div>
-        </div>
+    {% endfor %}
     </aside>
 </body>
 </html>

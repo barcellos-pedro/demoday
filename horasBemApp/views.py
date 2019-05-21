@@ -2,8 +2,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
-from horasBemApp.forms import FaleAquiForm, Login, CadOngForm, CadAlunoForm
-from horasBemApp.models import Usuario, FaleAqui, Ong, Aluno
+from horasBemApp.forms import FaleAquiForm, Login, CadOngForm, CadAlunoForm, CadVagaForm
+from horasBemApp.models import Usuario, FaleAqui, Ong, Aluno, Vaga
 
 # Create your views here.
 def index(request):
@@ -58,7 +58,11 @@ def CadAluno(request):
 
 ## Vagas
 def vagas(request):
-    return render(request, 'vagas.html')
+    data = {}
+    data['ongs'] = Ong.objects.all()
+    data['usuario'] = Aluno.objects.all()
+    data['vagas'] = Vaga.objects.all()
+    return render(request, 'vagas.html', data)
 
 ##login
 def login_user(request):

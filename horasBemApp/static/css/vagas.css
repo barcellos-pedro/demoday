@@ -16,17 +16,18 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    widows: 100%;
+    width: 100%;
 }
 
 section{
     grid-area: section;
-    background-color: white;
+    background-color: #f7f7f7;
 }
 
 #aluno #icone-perfil img{
     width: 200px;
     size: 200px;
+    border-radius: 50%;
     margin-bottom: 60px;
 }
 
@@ -45,41 +46,19 @@ h3{
     margin-top: 100px;
 }
 
-.container {
-	margin: 0 auto;
-    display: flex;
-	border: 1px solid #ccc;
-}
-
-.item {
-	margin: 5px;
-	background: tomato;
-	text-align: center;
-    font-size: 1.5em;
-    height: 296px;
-    width: 200px;
-    background-size: cover;
-}
-
-.grow1 {
-    flex-grow: 1;
-    background-image: url("/static/images/ongExample2.jpg");
-}
-
-.grow2 {
-    flex-grow: 2;
-    background-image: url("/static/images/ongExample2.jpg");
-}
-
-.ong_title{
-    font-weight: bold;
-    font-size: 20px;
+.bt_vagas{
+    background-color: rgba(255, 87, 87, 0.9);
     color: white;
-    margin-top: 25px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 25px;
 }
 
-.ong_title:nth-child(2n+1){
-    text-decoration: underline;
+.bt_vagas:hover{
+    background-color: white;
+    color: rgba(255, 87, 87, 0.9);
+    cursor: pointer;
 }
 
 #aluno button{
@@ -111,33 +90,6 @@ h3{
     width: 182px;
 }
 
-.bt_vagas{
-    background-color: rgba(255, 87, 87, 0.9);
-    color: white;
-    font-size: 20px;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 25px;
-    margin-top: 5px;
-}
-
-.bt_vagas:hover{
-    background-color: white;
-    color: rgba(255, 87, 87, 0.9);
-    cursor: pointer;
-}
-
-span{
-    font-weight: bold;
-}
-
-.img_vaga{
-    margin-top: 10px;
-    width: 100px;
-    height: 90px;
-    border-radius: 50%;
-}
-
 #linha{
     border: 2px solid rgba(255, 87, 87, 0.9);
 }
@@ -147,4 +99,27 @@ span{
     text-align: center;
     font-size: 30px;
     padding: 5px 10px;
+}
+
+#bem-vindo{
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 205px;
+    background-image: url("/static/images/ongExample2.jpg");
+    background-size: cover;
+}
+
+.container p{
+    color: white;
+    background-color: rgba(128, 128, 128, 0.2);
+    border-radius: 4px;
+    font-size: 40px;
+    margin: 0;
 }
