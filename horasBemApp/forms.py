@@ -1,7 +1,7 @@
 import datetime
 from django import forms
 
-from horasBemApp.models import Usuario, FaleAqui, Aluno, Ong
+from horasBemApp.models import Usuario, FaleAqui, Ong, Aluno
 
 class FaleAquiForm(forms.ModelForm):
     email = forms.CharField(label='E-mail')
@@ -21,6 +21,20 @@ class Login(forms.ModelForm):
         model = Usuario
         fields = '__all__'
 
+class CadOngForm(forms.ModelForm):
+    class Meta:
+        model = Ong
+        fields = [
+            "nome",
+            "sigla",
+            "rua",
+            "numero",
+            "cep",
+            "bairro",
+            "cidade",
+            "estado"
+        ]
+
 class CadAlunoForm(forms.ModelForm):
     class Meta:
         model = Aluno
@@ -36,21 +50,4 @@ class CadAlunoForm(forms.ModelForm):
             'bairro',
             'cidade',
             'estado',
-            'foto'
         ]
-
-class CadOngForm(forms.ModelForm):
-    class Meta:
-        model = Ong
-        fields = [
-            "nome",
-            "nome_social",
-            "sigla",
-            "rua",
-            "numero",
-            "cep",
-            "bairro",
-            "cidade",
-            "estado"
-        ]
-

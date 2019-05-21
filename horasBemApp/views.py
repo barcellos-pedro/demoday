@@ -2,8 +2,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from horasBemApp.forms import FaleAquiForm, CadAlunoForm, Login, CadOngForm
-from horasBemApp.models import Usuario, FaleAqui, Aluno, Ong
+from horasBemApp.forms import FaleAquiForm, Login, CadOngForm, CadAlunoForm
+from horasBemApp.models import Usuario, FaleAqui, Ong, Aluno
 
 # Create your views here.
 def index(request):
@@ -25,23 +25,6 @@ def entrarAluno(request):
     }
     return render(request, 'entrar_aluno.html')
 
-def CadAluno(request):
-    formulario = CadAlunoForm(request.POST or None)
-    formLogin = Login(request.POST or None)
-    if formulario.is_valid():
-        usuario = formLogin.save()
-        aluno = formulario.save(commit=False)
-        aluno.usuario = usuario
-        aluno.save()
-        redirect('inicioSite')
-    else:
-        messages.error(request, "Nao foi")
-    contexto = {
-        'form':formulario,
-        'login':formLogin
-    }
-    return render(request,'cadastroAluno.html',contexto)
-
 def CadOng(request):
     formulario = CadOngForm(request.POST or None)
     formLogin = Login(request.POST or None)
@@ -50,12 +33,29 @@ def CadOng(request):
         ong = formulario.save(commit=False)
         ong.usuario = usuario
         ong.save()
+        formulario = CadOngForm()
         redirect('inicioSite')
     contexto = {
         'form':formulario,
         'login':formLogin
     }
     return render(request,'cadastroOng.html',contexto)
+
+def CadAluno(request):
+    formulario = CadAlunoForm(request.POST or None)
+    formLogin = Login(request.POST or None)
+    if formulario.is_valid():
+        usuario = formLogin.save()
+        aluno = formulario.save(commit=False)
+        aluno.usuario = usuario
+        aluno.save()
+        formulario = CadAlunoForm()
+        redirect('inicioSite')
+    contexto = {
+        'form':formulario,
+        'login':formLogin
+    }
+    return render(request,'cadastroAluno.html',contexto)
 
 ## Vagas
 def vagas(request):

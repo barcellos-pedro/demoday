@@ -63,19 +63,19 @@
                 <div id="eusou-setinha">
                     <p>Cadastre-se</p>
                 </div>
-                <a href="{% url  'cadAluno' %}">
+                <a href="{% url 'cadAluno' %}">
                     <div id="eusou-aluno">
                         <p>Aluno</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="{% url 'cadOng' %}">
                     <div id="eusou-ong">
                         <p>ONG</p>
                     </div>
                 </a>
             </div>
             <div id="facaParte-cadastro">
-                <p> Já possui cadastro ? <a href=""><span>ENTRAR</span> </a></p>
+                <p> Já possui cadastro ? <a href="{% url 'login' %}"><span>ENTRAR</span> </a></p>
             </div>
         </div>
         <img src="{% static 'images/iconesFacaParte.png' %}" alt="">
