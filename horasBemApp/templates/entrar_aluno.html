@@ -13,7 +13,7 @@
         <div id="icone-perfil">
             <img src="{% static 'images/euDrake.jpg' %}" alt="">
         </div>
-        <p>Pedro Barcellos dos Reis (Drake)</p>
+        <p>{{}}</p>
         <h2>Música</h2>
         <h3>Horas desejadas: 180 horas</h3>
         <button onclick="location.href='#'" type="button">Sair</button>
@@ -24,35 +24,14 @@
         <div id="linha">
                 
         </div>
+        {% for ong in ongs %}
         <div class="container">
             <div class="item grow1">
-                <p class=ong_title>ONG</p>
-                <button class=bt_vagas>Vagas</button>
-            </div>
-            <div class="item grow1">
-                <p class=ong_title>ONG</p>
-                <button class=bt_vagas>Vagas</button>
-            </div>
-            <div class="item grow1">
-                <p class=ong_title>ONG</p>                
+                <p class=ong_title>{{ong.nome}}</p>
                 <button class=bt_vagas>Vagas</button>
             </div>
         </div>
-
-        <div class="container">
-            <div class="item grow2">
-                <p class=ong_title>ONG</p>
-                <button class=bt_vagas>Vagas</button>
-            </div>
-            <div class="item grow2">
-                <p class=ong_title>ONG</p>
-                <button class=bt_vagas>Vagas</button>
-            </div>
-            <div class="item grow2">
-                <p class=ong_title>ONG</p>
-                <button class=bt_vagas>Vagas</button>
-            </div>
-        </div>
+        {% endfor %}
     </aside>
 
 </body>

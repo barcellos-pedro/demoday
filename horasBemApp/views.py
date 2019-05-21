@@ -19,11 +19,10 @@ def index(request):
 
 ## Aluno
 def entrarAluno(request):
-    alunos = Aluno.objects.all() #OBJECTS - salva o conjunto de objetos que foram cadastrados
-    contexto = {
-        'alunos': alunos
-    }
-    return render(request, 'entrar_aluno.html')
+    data = {}
+    data['ongs'] = Ong.objects.all() #OBJECTS - salva o conjunto de objetos que foram cadastrados
+    
+    return render(request, 'entrar_aluno.html', data)
 
 def CadOng(request):
     formulario = CadOngForm(request.POST or None)

@@ -76,7 +76,7 @@ class Ong(models.Model):
     estado = models.CharField(max_length=2, choices=estado_opc)
     usuario = models.ForeignKey(Usuario,on_delete=models.CASCADE)
     def __str__(self):
-        return self.nome_social
+        return self.nome
 
 class Aluno(models.Model):
     nome = models.CharField(max_length=100)
