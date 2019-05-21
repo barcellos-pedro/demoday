@@ -50,10 +50,10 @@ header nav a:hover{
 header, #como-fazemos, #faleAqui{
     /* Degrade */
     background: rgb(151,88,237);
-    background: -moz-linear-gradient(-45deg, rgba(151,88,237,1) 0%, rgba(197,113,166,1) 50%, rgba(247,140,89,1) 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);
-    background: linear-gradient(135deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9758ed', endColorstr='#f78c59',GradientType=1 );
+    /*background: -moz-linear-gradient(-45deg, rgba(151,88,237,1) 0%, rgba(197,113,166,1) 50%, rgba(247,140,89,1) 100%);*/
+    /*background: -webkit-linear-gradient(-45deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);*/
+    /*background: linear-gradient(135deg, rgba(151,88,237,1) 0%,rgba(197,113,166,1) 50%,rgba(247,140,89,1) 100%);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9758ed', endColorstr='#f78c59',GradientType=1 );*/
 }
 /* FIM HEADER, FOOTER, DIV.COMO FAZEMOS */
 
