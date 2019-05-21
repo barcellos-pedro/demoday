@@ -11,6 +11,8 @@ admin.site.register(FaleAqui)
 admin.site.register(Aluno)
 admin.site.register(Ong)
 
+admin.site.register(Usuarios)
+
 # @admin.register(FaleAqui)
 # class FaleAquiAdmin(admin.ModelAdmin):
 #     list_display = ('nome', 'email')

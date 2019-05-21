@@ -19,10 +19,7 @@
         </div>
         <form method="post">
             {% csrf_token %}
-            <label for="username">Usuário:</label>
-            <input type="text" placeholder="exemplo@exemplo.com" name="username" size="10">
-            <label for="password">Senha:</label>
-            <input type="password" placeholder="Senha" name="password">
+            {{form.as_p}}
             <button type="submit">Entrar</button>
         </form>
         <div class="esqueci">

@@ -1,5 +1,6 @@
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from horasBemApp.forms import FaleAquiForm, CadAlunoForm, Login, CadOngForm
 from horasBemApp.models import Usuarios, FaleAqui, Aluno, Ong
@@ -47,4 +48,23 @@ def vagas(request):
 ##login
 def login_user(request):
 
-    return render(request,'login.html')
+    formLogin = Login(request.POST or None)
+
+    contexto = {
+        'form':formLogin
+    }
+
+    if request.POST:
+        email = request.POST.get('email')
+        senha = request.POST.get('senha')
+
+        user = Usuarios.objects.get(email=email)
+
+
+        if (senha == user.senha):
+            login(request,user)
+            return HttpResponse('Foiiiiii')
+        else:
+            messages.error(request,"Usuario e senha invalidos")
+        return redirect('/login/')
+    return render(request,'login.html',contexto)
