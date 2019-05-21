@@ -10,7 +10,8 @@
         <h2> Cadastro Ong </h2>
         <form method="POST">
             {% csrf_token %}
-            {{form.as_p}}    
+            {{form.as_p}}
+            {{login.as_p}}
             <div class="btn-cadastrar">
                 <button type="submit">Cadastrar</button>
             </div>

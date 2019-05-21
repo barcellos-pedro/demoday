@@ -27,18 +27,34 @@ def entrarAluno(request):
 
 def CadAluno(request):
     formulario = CadAlunoForm(request.POST or None)
+    formLogin = Login(request.POST or None)
     if formulario.is_valid():
-        if formulario.save():
-            redirect('inicioSite')
-    contexto = {'form':formulario}
+        usuario = formLogin.save()
+        aluno = formulario.save(commit=False)
+        aluno.usuario = usuario
+        aluno.save()
+        redirect('inicioSite')
+    else:
+        messages.error(request, "Nao foi")
+    contexto = {
+        'form':formulario,
+        'login':formLogin
+    }
     return render(request,'cadastroAluno.html',contexto)
 
 def CadOng(request):
     formulario = CadOngForm(request.POST or None)
+    formLogin = Login(request.POST or None)
     if formulario.is_valid():
-        if formulario.save():
-            redirect('inicioSite')
-    contexto = {'form':formulario}
+        usuario = formLogin.save()
+        ong = formulario.save(commit=False)
+        ong.usuario = usuario
+        ong.save()
+        redirect('inicioSite')
+    contexto = {
+        'form':formulario,
+        'login':formLogin
+    }
     return render(request,'cadastroOng.html',contexto)
 
 ## Vagas

@@ -53,6 +53,9 @@ class Usuario(models.Model):
     email = models.EmailField()
     senha = models.CharField(max_length=36)
 
+    def __str__(self):
+        return self.email
+
 class FaleAqui(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)

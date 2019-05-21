@@ -6,11 +6,15 @@
 {% block css %} <link rel="stylesheet" href="{% static 'css/cadastro.css' %}"> {% endblock %}
 
 {% block content %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
     <div class="formulario">
         <h2> Cadastro Aluno </h2>
         <form method="POST">
             {% csrf_token %}
-            {{form.as_p}}    
+            {{form.as_p}}
+            {{login.as_p}}
             <div class="btn-cadastrar">
                 <button type="submit">Cadastrar</button>
             </div>
