@@ -13,6 +13,11 @@
     <title>Login</title>
 </head>
 <body>
+    {% for message in messages %}
+        <div class="mensagens">
+            <strong>Erro !</strong> {{ message }}
+        </div>
+    {% endfor %}
     <div class="login">
         <div class="imagem">
             <img src="{% static 'images/img_avatar2.png' %}" alt="">

@@ -28,4 +28,6 @@ urlpatterns = [
     path('cadastroOng', views.CadOng,name='cadOng'),
     path('login',views.login_user, name='login'),
 
+    path('usuario/<int:pk>',views.entrarAluno,name='homeAluno')
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -66,5 +66,5 @@ def login_user(request):
             return HttpResponse('Foiiiiii')
         else:
             messages.error(request,"Usuario e senha invalidos")
-        return redirect('/login/')
+        return redirect('/login')
     return render(request,'login.html',contexto)
