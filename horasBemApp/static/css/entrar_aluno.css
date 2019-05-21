@@ -46,40 +46,6 @@ h3{
     margin-top: 100px;
 }
 
-.container {
-	margin: 0 auto;
-    display: flex;
-	border: 1px solid #ccc;
-}
-
-.item {
-	margin: 5px;
-	background: tomato;
-	text-align: center;
-    font-size: 1.5em;
-    height: 296px;
-    width: 200px;
-    background-size: cover;
-}
-
-.grow1 {
-    flex-grow: 1;
-    background-image: url("/static/images/ongExample2.jpg");
-}
-
-.grow2 {
-    flex-grow: 2;
-    background-image: url("/static/images/ongExample2.jpg");
-}
-
-.ong_title{
-    margin-top: 35%;
-    margin-bottom: 20%;
-    font-weight: bold;
-    font-size: 40px;
-    color: white;
-}
-
 .bt_vagas{
     background-color: rgba(255, 87, 87, 0.9);
     color: white;
@@ -133,4 +99,26 @@ h3{
     text-align: center;
     font-size: 30px;
     padding: 5px 10px;
+}
+
+#bem-vindo{
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 205px;
+    background-image: url("/static/images/ongExample2.jpg");
+    background-size: cover;
+}
+
+.container p{
+    color: white;
+    background-color: rgba(128, 128, 128, 0.2);
+    border-radius: 4px;
+    font-size: 40px;
 }

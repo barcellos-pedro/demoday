@@ -20,7 +20,7 @@ def index(request):
 ## Aluno
 def entrarAluno(request,pk):
     data = {}
-    data['ongs'] = Ong.objects.all() #OBJECTS - salva o conjunto de objetos que foram cadastrados
+    data['ongs'] = Ong.objects.all()
     data['usuario'] = Aluno.objects.get(pk=pk)
     return render(request, 'entrar_aluno.html', data)
 
