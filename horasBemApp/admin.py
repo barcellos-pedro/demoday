@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from horasBemApp.models import Usuarios, FaleAqui, Aluno, Ong
+from horasBemApp.models import Usuario, FaleAqui, Aluno, Ong
 
 admin.site.site_title = "Admin Horas do bem"
 admin.site.site_header = "Administração Horas do bem"
@@ -11,7 +11,7 @@ admin.site.register(FaleAqui)
 admin.site.register(Aluno)
 admin.site.register(Ong)
 
-admin.site.register(Usuarios)
+admin.site.register(Usuario)
 
 # @admin.register(FaleAqui)
 # class FaleAquiAdmin(admin.ModelAdmin):

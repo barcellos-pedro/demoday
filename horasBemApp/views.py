@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from horasBemApp.forms import FaleAquiForm, CadAlunoForm, Login, CadOngForm
-from horasBemApp.models import Usuarios, FaleAqui, Aluno, Ong
+from horasBemApp.models import Usuario, FaleAqui, Aluno, Ong
 
 # Create your views here.
 def index(request):
@@ -58,7 +58,7 @@ def login_user(request):
         email = request.POST.get('email')
         senha = request.POST.get('senha')
 
-        user = Usuarios.objects.get(email=email)
+        user = Usuario.objects.get(email=email)
 
 
         if (senha == user.senha):

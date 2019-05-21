@@ -49,7 +49,7 @@ instituicao_opc = [
     ('FAPCOM', 'Faculdade Paulus de Comunicação e Tecnologia')
 ]
 # Create your models here.
-class Usuarios(models.Model):
+class Usuario(models.Model):
     email = models.EmailField()
     senha = models.CharField(max_length=36)
 
@@ -75,7 +75,7 @@ class Aluno(models.Model):
     cidade = models.CharField(max_length=45)
     estado = models.CharField(max_length=2, choices=estado_opc)
     foto = models.ImageField(upload_to='', null=True)
-
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     def __str__(self):
         return self.nome
 
@@ -89,6 +89,6 @@ class Ong(models.Model):
     bairro = models.CharField(max_length=45)
     cidade = models.CharField(max_length=45)
     estado = models.CharField(max_length=2, choices=estado_opc)
-
+    usuario = models.ForeignKey(Usuario,on_delete=models.CASCADE)
     def __str__(self):
         return self.nome_social
