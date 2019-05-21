@@ -62,8 +62,7 @@ def login_user(request):
 
 
         if (senha == user.senha):
-            login(request,user)
-            return HttpResponse('Foiiiiii')
+            return redirect('/entrar_aluno')
         else:
             messages.error(request,"Usuario e senha invalidos")
         return redirect('/login')

@@ -16,12 +16,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    widows: 100%;
+    width: 100%;
 }
 
 section{
     grid-area: section;
-    background-color: white;
+    background-color: #f7f7f7;
 }
 
 #aluno #icone-perfil img{
