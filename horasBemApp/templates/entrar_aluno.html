@@ -14,9 +14,11 @@
             <img src="{% static 'images/euDrake.jpg' %}" alt="">
         </div>
         <p>{{usuario.nome}}</p>
-        <h2>Música</h2>
+        <h2>{{usuario.Instituicao}}</h2>
         <h3>Horas desejadas: 180 horas</h3>
-        <button onclick="location.href='#'" type="button">Sair</button>
+        <a href="{% url 'inicioSite' %}">
+            <button type="button">Sair</button>
+        </a>
     </section>
 
     <aside>
@@ -27,9 +29,9 @@
     {% for ong in ongs %}
         <div class="container">
             <p>{{ong.nome}}</p>
-        <a href="">
-            <button class=bt_vagas>Vagas</button>
-        </a>
+            <a href="{% url 'areaVagas' %}">
+                <button class=bt_vagas>Vagas</button>
+            </a>
         </div>
     {% endfor %}
     </aside>

@@ -2,8 +2,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
-from horasBemApp.forms import FaleAquiForm, Login, CadOngForm, CadAlunoForm
-from horasBemApp.models import Usuario, FaleAqui, Ong, Aluno
+from horasBemApp.forms import FaleAquiForm, Login, CadOngForm, CadAlunoForm, CadVagaForm
+from horasBemApp.models import Usuario, FaleAqui, Ong, Aluno, Vaga
 
 # Create your views here.
 def index(request):
@@ -16,13 +16,6 @@ def index(request):
         'form':formulario,
     }
     return render(request,'index.html', contexto)
-
-## Aluno
-def entrarAluno(request,pk):
-    data = {}
-    data['ongs'] = Ong.objects.all()
-    data['usuario'] = Aluno.objects.get(pk=pk)
-    return render(request, 'entrar_aluno.html', data)
 
 def CadOng(request):
     formulario = CadOngForm(request.POST or None)
@@ -56,9 +49,29 @@ def CadAluno(request):
     }
     return render(request,'cadastroAluno.html',contexto)
 
+
+##Criar CadVaga
+
 ## Vagas
 def vagas(request):
-    return render(request, 'vagas.html')
+    data = {}
+    data['ongs'] = Ong.objects.all()
+    data['usuario'] = Aluno.objects.all()
+    data['vagas'] = Vaga.objects.all()
+    return render(request, 'vagas.html', data)
+
+## Aluno
+def entrarAluno(request,pk):
+    data = {}
+    data['ongs'] = Ong.objects.all()
+    data['usuario'] = Aluno.objects.get(pk=pk)
+    return render(request, 'entrar_aluno.html', data)
+
+## ONG
+def entrarOng(request):
+    data = {}
+    data['vagas'] = Vaga.objects.all()
+    return render(request, 'entrar_ong.html', data)
 
 ##login
 def login_user(request):

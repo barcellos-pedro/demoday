@@ -19,9 +19,11 @@
         </div>
     {% endfor %}
     <div class="login">
-        <div class="imagem">
+        <!-- 
+            <div class="imagem">
             <img src="{% static 'images/img_avatar2.png' %}" alt="">
-        </div>
+            </div>
+         -->
         <form method="post">
             {% csrf_token %}
             {{form.as_p}}

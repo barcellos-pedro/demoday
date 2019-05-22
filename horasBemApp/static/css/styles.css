@@ -60,7 +60,7 @@ header, #como-fazemos, #faleAqui{
 /* FOOTER */
 footer{
     padding: 30px;
-    background-color: #7a698d;
+    background-color: white;
     height: 90px;
     display: flex;
     justify-content: center;

@@ -94,3 +94,10 @@ class Aluno(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     def __str__(self):
         return self.nome
+
+class Vaga(models.Model):
+    nome_vaga = models.CharField(max_length=100)
+    detalhes = models.CharField(max_length=100)
+    nome_ong = models.ForeignKey(Ong, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.nome_vaga
