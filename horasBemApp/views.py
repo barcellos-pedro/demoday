@@ -1,6 +1,4 @@
-from django.contrib.auth import authenticate, login
 from django.contrib import messages
-from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from horasBemApp.forms import FaleAquiForm, Login, CadOngForm, CadAlunoForm, CadVagaForm
 from horasBemApp.models import Usuario, FaleAqui, Ong, Aluno, Vaga
@@ -88,10 +86,13 @@ def login_user(request):
         usuario = Usuario.objects.all().get(email=email)
         if usuario is not None:
             if (senha == usuario.senha):
-                return redirect('/entrar_aluno/%s' % usuario.id)
-            else:
-                messages.error(request,"Usuario e senha invalidos")
-            return redirect('/login')
+                aluno = Aluno.objects.get(usuario_id=usuario.id)
+                if aluno is not None:
+                    return redirect('/entrar_aluno/%s' % aluno.id)
+                else:
+                    ong = Ong.objects.all().get(usuario_id=usuario.id)
+                    return redirect('/entrar_ong/%s' % ong.id)
         else:
-            messages.error(request, "Usuario e senha invalidos")
+           messages.error(request,"Usuario e senha invalidos")
+
     return render(request,'login.html',contexto)
