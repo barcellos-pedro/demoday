@@ -54,9 +54,10 @@ h3{
     border-radius: 4px;
     padding: 5px 25px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
-#aluno:hover{
+aside .bt_vagas:hover{
     background-color: white;
     color: rgba(255, 87, 87, 0.9);
     cursor: pointer;
