@@ -17,13 +17,6 @@ def index(request):
     }
     return render(request,'index.html', contexto)
 
-## Aluno
-def entrarAluno(request,pk):
-    data = {}
-    data['ongs'] = Ong.objects.all()
-    data['usuario'] = Aluno.objects.get(pk=pk)
-    return render(request, 'entrar_aluno.html', data)
-
 def CadOng(request):
     formulario = CadOngForm(request.POST or None)
     formLogin = Login(request.POST or None)
@@ -56,6 +49,9 @@ def CadAluno(request):
     }
     return render(request,'cadastroAluno.html',contexto)
 
+
+##Criar CadVaga
+
 ## Vagas
 def vagas(request):
     data = {}
@@ -63,6 +59,19 @@ def vagas(request):
     data['usuario'] = Aluno.objects.all()
     data['vagas'] = Vaga.objects.all()
     return render(request, 'vagas.html', data)
+
+## Aluno
+def entrarAluno(request,pk):
+    data = {}
+    data['ongs'] = Ong.objects.all()
+    data['usuario'] = Aluno.objects.get(pk=pk)
+    return render(request, 'entrar_aluno.html', data)
+
+## ONG
+def entrarOng(request):
+    data = {}
+    data['vagas'] = Vaga.objects.all()
+    return render(request, 'entrar_ong.html', data)
 
 ##login
 def login_user(request):

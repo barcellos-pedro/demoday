@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
-/* ENTRAR "ALUNO" */
+/* ENTRAR "ONG" */
 body{
     margin: 0;
     display: grid;
@@ -43,7 +43,7 @@ h3{
 }
 
 #aluno button{
-    margin-top: 100px;
+    
 }
 
 .bt_vagas{
@@ -53,15 +53,16 @@ h3{
     border: none;
     border-radius: 4px;
     padding: 5px 25px;
+    cursor: pointer;
 }
 
-.bt_vagas:hover{
+#aluno:hover{
     background-color: white;
     color: rgba(255, 87, 87, 0.9);
     cursor: pointer;
 }
 
-#aluno button{
+#aluno #sair{
     background-color: gray;
     color: white;
     font-size: 20px;
@@ -88,6 +89,7 @@ h3{
 #aluno h3{
     letter-spacing: 3px;
     width: 182px;
+    margin-bottom: 50px;
 }
 
 #linha{
