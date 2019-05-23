@@ -22,10 +22,10 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index,name='inicioSite'),
-    path('entrar_aluno/<int:pk>/', views.entrarAluno,name='areaAluno'),
-    path('entrar_ong', views.entrarOng,name='areaOng'),
+    path('entrar_aluno/<int:pk>/', views.entrar_aluno,name='areaAluno'),
+    path('entrar_ong/<int:pk>/', views.entrar_ong,name='areaOng'),
     path('vagas', views.vagas, name='areaVagas'),
-    path('cadastroOng', views.CadOng,name='cadOng'),
-    path('cadastroAluno', views.CadAluno, name="cadAluno"),
+    path('cadastroOng', views.cad_ong,name='cadOng'),
+    path('cadastroAluno', views.cad_aluno, name="cadAluno"),
     path('login',views.login_user, name='login'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

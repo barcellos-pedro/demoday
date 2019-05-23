@@ -37,6 +37,7 @@ class CadOngForm(forms.ModelForm):
 
 class CadAlunoForm(forms.ModelForm):
     class Meta:
+
         model = Aluno
         fields = [
             'nome',

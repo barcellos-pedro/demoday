@@ -15,7 +15,7 @@ def index(request):
     }
     return render(request,'index.html', contexto)
 
-def CadOng(request):
+def cad_ong(request):
     formulario = CadOngForm(request.POST or None)
     formLogin = Login(request.POST or None)
     if formulario.is_valid():
@@ -29,9 +29,9 @@ def CadOng(request):
         'form':formulario,
         'login':formLogin
     }
-    return render(request,'cadastroOng.html',contexto)
+    return render(request, 'cadastroOng.html', contexto)
 
-def CadAluno(request):
+def cad_aluno(request):
     formulario = CadAlunoForm(request.POST or None)
     formLogin = Login(request.POST or None)
     if formulario.is_valid():
@@ -45,7 +45,7 @@ def CadAluno(request):
         'form':formulario,
         'login':formLogin
     }
-    return render(request,'cadastroAluno.html',contexto)
+    return render(request, 'cadastroAluno.html', contexto)
 
 
 ##Criar CadVaga
@@ -59,40 +59,47 @@ def vagas(request):
     return render(request, 'vagas.html', data)
 
 ## Aluno
-def entrarAluno(request,pk):
+def entrar_aluno(request,pk):
     data = {}
     data['ongs'] = Ong.objects.all()
     data['usuario'] = Aluno.objects.get(pk=pk)
     return render(request, 'entrar_aluno.html', data)
 
 ## ONG
-def entrarOng(request):
+def entrar_ong(request,pk):
     data = {}
+    data ['usuario'] = Ong.objects.get(pk=pk)
     data['vagas'] = Vaga.objects.all()
     return render(request, 'entrar_ong.html', data)
 
 ##login
 def login_user(request):
 
-    formLogin = Login(request.POST or None)
+    form_login = Login(request.POST or None)
 
     contexto = {
-        'form':formLogin
+        'form': form_login
     }
-    # if request.POST:
-    email = request.POST.get('email')
-    senha = request.POST.get('senha')
-    if formLogin.is_valid():
-        usuario = Usuario.objects.all().get(email=email)
-        if usuario is not None:
-            if (senha == usuario.senha):
-                aluno = Aluno.objects.get(usuario_id=usuario.id)
-                if aluno is not None:
-                    return redirect('/entrar_aluno/%s' % aluno.id)
-                else:
-                    ong = Ong.objects.all().get(usuario_id=usuario.id)
-                    return redirect('/entrar_ong/%s' % ong.id)
-        else:
-           messages.error(request,"Usuario e senha invalidos")
 
-    return render(request,'login.html',contexto)
+    if request.POST:
+        email = request.POST.get('email')
+        senha = request.POST.get('senha')
+        if form_login.is_valid():
+            usuario = Usuario.objects.get(email=email)
+            if usuario is not None:
+                if senha == usuario.senha:
+                    try:
+                        aluno = Aluno.objects.get(usuario_id=usuario.id)
+                        if aluno is not None:
+                            return redirect('/entrar_aluno/%s' % aluno.id)
+                    except Aluno.DoesNotExist:
+                        try:
+                            ong = Ong.objects.get(usuario_id=usuario.id)
+                            if ong is not None:
+                                return redirect('/entrar_ong/%s' % ong.id)
+                        except Ong.DoesNotExist:
+                            messages.error(request,"Usuario e senha invalidos")
+            else:
+               messages.error(request, "Usuario e senha invalidos")
+
+    return render(request, 'login.html', contexto)
